@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kalkulator wynagrodzeń i urlopów</string>
+    <string name="head">Wynagrodzenia i urlopy</string>
+    <string-array name="aaa">
+        <item>Obliczanie wynagrodzenia</item>
+        <item>Urlopy</item>
+        <item>Państwowa Inspekacja Pracy</item>
+        <item>Zakład Ubezpieczeń Społecznych</item>
+    </string-array>
+</resources>
