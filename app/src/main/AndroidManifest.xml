@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.robertkaczmarek.wynagrodzeniacalculator">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SalaryActivity" />
-        <activity android:name=".HolidayActivity"></activity>
+        <activity android:name=".HolidayActivity" />
     </application>
 
 </manifest>
