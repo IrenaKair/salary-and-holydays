@@ -11,7 +11,7 @@
     tools:context="com.example.robertkaczmarek.wynagrodzeniacalculator.HolidayActivity">
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:id="@+id/infoholiday">
         <TextView
             android:id="@+id/textinf"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/schoolChose"
         android:layout_below="@id/infoholiday"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="@string/schoolChose"
         android:paddingLeft="10dp"
 
@@ -40,7 +40,7 @@
         android:layout_below="@id/infoholiday"
         android:layout_toRightOf="@+id/schoolChose"
         android:layout_marginLeft="40dp"
-       android:layout_marginTop="30dp"
+       android:layout_marginTop="20dp"
         >
 
     </Spinner>
@@ -72,7 +72,7 @@
         android:layout_below="@+id/yersWork"
         android:layout_alignLeft="@+id/yersWork"
         android:paddingLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="@string/day"/>
 
     <TextView
@@ -81,10 +81,9 @@
         android:id="@+id/dayHoliday"
         android:layout_below="@+id/counHoliday"
         android:layout_alignLeft="@+id/counHoliday"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
        android:layout_alignBottom="@+id/day"
         android:background="@android:color/darker_gray"
-
         android:layout_toRightOf="@+id/day"
 
 
@@ -102,7 +101,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnday"
         android:layout_below="@+id/dayHoliday"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:onClick="countDayHoliday"
         android:text="@string/countHoliday"
         />
@@ -115,5 +114,45 @@
     android:layout_toRightOf="@id/btnday"
     android:layout_alignBottom="@id/btnday"
     android:onClick="czysc"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/month"
+        android:layout_below="@+id/btnday"
+        android:layout_alignLeft="@+id/btnday"
+        android:layout_marginTop="20dp"
+        android:text="@string/month"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/d"
+        android:layout_alignBottom="@+id/month"
+        android:id="@+id/monthHoliday"
+        android:inputType="number"
+        />
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/MonthHol"
+    android:layout_below="@+id/month"
+    android:layout_alignLeft="@+id/month"
+    android:layout_marginTop="20dp"
+    android:text="@string/monthHoliday"
+
+    />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/countMonthHol"
+        android:layout_alignBottom="@+id/MonthHol"
+        android:layout_alignLeft="@+id/monthHoliday"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:background="@android:color/darker_gray"
+
+        />
 
 </RelativeLayout>

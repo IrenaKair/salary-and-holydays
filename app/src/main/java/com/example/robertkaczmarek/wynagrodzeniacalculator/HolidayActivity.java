@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class HolidayActivity extends AppCompatActivity  {
     Spinner school;
     int years;
-    int ur;
+    Double ur;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,10 @@ public class HolidayActivity extends AppCompatActivity  {
         dayHolidayx.setText("              ");
         EditText yerWork = (EditText) findViewById(R.id.counHoliday);
         yerWork.setText("");
+        TextView countMHol = (TextView)findViewById(R.id.countMonthHol);
+        countMHol.setText("");
+        EditText month = (EditText)findViewById(R.id.monthHoliday);
+        month.setText("");
     }
 
 
@@ -36,7 +40,7 @@ public class HolidayActivity extends AppCompatActivity  {
         String yW = yearWork.getText().toString();
         int yWa = Integer.parseInt(yW);
 
-        int staż = yWa+years;
+
         school = (Spinner) findViewById(R.id.hol);
         int x  = (Integer) school.getSelectedItemPosition();
         switch (x){
@@ -65,18 +69,26 @@ public class HolidayActivity extends AppCompatActivity  {
             default:
                 break;
         }
+        int staż = yWa+years;
         if (staż < 10) {
-            ur = 20;
+            ur = 20.00;
         } else if (staż >= 10) {
-            ur = 26;
+            ur = 26.00;
         }
-        String urA = String.valueOf(ur);
+        String urA = String.valueOf(Math.round(ur));
 
         TextView dayHolidayx = (TextView) findViewById(R.id.dayHoliday);
         dayHolidayx.setText(urA);
 
+        EditText month = (EditText)findViewById(R.id.monthHoliday);
+        String monthA = month.getText().toString();
+        int mmonth = Integer.parseInt(monthA);
 
+        Double countMonthHol = ur/12*mmonth;
+        String countMonthH = String.valueOf(Math.round(countMonthHol));
 
+        TextView countMHol = (TextView)findViewById(R.id.countMonthHol);
+        countMHol.setText(countMonthH);
 
     }
 

@@ -133,4 +133,6 @@ Pracodawca jest obowiązany pokryć koszty poniesione przez pracownika w bezpoś
     <string name="dayHoliday">"                  "</string>
     <string name="countHoliday">Oblicz</string>
     <string name="cleraDay">Wyczyść</string>
+    <string name="month">Miesiące zatrudnienia</string>
+    <string name="monthHoliday">Urlop za przepracowane miesiące</string>
 </resources>
