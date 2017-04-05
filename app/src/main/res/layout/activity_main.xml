@@ -8,21 +8,52 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     android:orientation="vertical"
+
     tools:context="com.example.robertkaczmarek.wynagrodzeniacalculator.MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:weightSum="2"
 
-  <TextView
-      android:layout_width="match_parent"
-      android:layout_height="70dp"
-      android:textSize="30sp"
-      android:background="@android:color/holo_green_light"
-      android:text="@string/head"/>
+    >
+  <ImageView
 
+      android:layout_width="0dp"
+      android:layout_height="100dp"
+      android:layout_weight="1"
+      android:src="@drawable/calc"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:background="#FFFF00"
+      android:paddingTop="5dp"
+      android:onClick="goSalary"
+
+
+      />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:src="@drawable/holiday"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#FFFF00"
+        android:paddingTop="5dp"
+        android:onClick="goHoliday"
+
+        />
+
+</LinearLayout>
    <ListView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/list"
-    android:entries="@array/aaa">
+    android:entries="@array/aaa"
+       android:background="@drawable/background">
 
 </ListView>
 

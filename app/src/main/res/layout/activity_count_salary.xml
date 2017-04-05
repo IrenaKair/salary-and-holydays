@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_count_salary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context="com.example.robertkaczmarek.wynagrodzeniacalculator.CountSalary">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:text="@string/inputSal"
+        android:id="@+id/salary"
+        android:paddingLeft="5dp"
+        android:textSize="18dp"
+        android:textColor="#060601"/>
+
+
+    <TextView
+        android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/takeSal"
+        android:layout_margin="5dp"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:textColor="#060601"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zus"
+        android:layout_alignLeft="@+id/salary"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/salary"
+        android:text="@string/zus"
+        android:paddingLeft="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countZus"
+        android:layout_toRightOf="@id/zus"
+        android:layout_alignBottom="@id/zus"
+        android:layout_alignLeft="@+id/takeSal"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pit"
+        android:layout_below="@id/zus"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/zus"
+        android:text="@string/pit"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countPit"
+        android:layout_toRightOf="@id/pit"
+        android:layout_alignBottom="@id/pit"
+        android:layout_alignLeft="@id/countZus"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zdr"
+        android:layout_below="@id/pit"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/zus"
+        android:text="@string/zdr"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countZdr"
+        android:layout_toRightOf="@id/zdr"
+        android:layout_alignBottom="@id/zdr"
+        android:layout_alignLeft="@id/countPit"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/netto"
+        android:layout_below="@id/zdr"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/zdr"
+        android:text="@string/salaryN"
+        android:paddingLeft="5dp"
+        android:textSize="19dp"
+        android:textColor="#0813d7"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countNetto"
+        android:layout_toRightOf="@id/netto"
+        android:layout_alignBottom="@id/netto"
+        android:layout_alignLeft="@id/countZdr"
+        android:textSize="19dp"
+        android:textColor="#0813d7"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pracodZUS"
+        android:layout_below="@id/netto"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@id/netto"
+        android:text="@string/pracZUS"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countpracZUS"
+        android:layout_toRightOf="@id/pracodZUS"
+        android:layout_alignBottom="@id/pracodZUS"
+        android:layout_alignLeft="@id/countNetto"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/koszty"
+        android:layout_below="@id/pracodZUS"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/pracodZUS"
+        android:text="@string/koszty"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countkoszty"
+        android:layout_toRightOf="@id/koszty"
+        android:layout_alignBottom="@id/koszty"
+        android:layout_alignLeft="@id/countpracZUS"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/procent"
+        android:id="@+id/procent"
+        android:gravity="center"
+        android:layout_below="@+id/countkoszty"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/precent"
+        android:textSize="19dp"
+        android:textColor="#0813d7"
+        android:layout_below="@+id/procent"/>
+
+</RelativeLayout>

@@ -8,25 +8,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="com.example.robertkaczmarek.wynagrodzeniacalculator.HolidayActivity">
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:id="@+id/infoholiday">
+
+
+
         <TextView
-            android:id="@+id/textinf"
-            android:layout_width="wrap_content"
+            android:id="@+id/textinfH"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/holiday"
-            android:textSize="20dp"/>
-    </ScrollView>
+            android:text="@string/moreHoliday"
+            android:textSize="20dp"
+            android:background="#FFFF00"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/schoolChose"
-        android:layout_below="@id/infoholiday"
-        android:layout_marginTop="20dp"
+        android:layout_below="@id/textinfH"
+        android:layout_marginTop="10dp"
         android:text="@string/schoolChose"
         android:paddingLeft="10dp"
 
@@ -37,121 +41,54 @@
         android:layout_height="wrap_content"
         android:id="@+id/hol"
         android:entries="@array/school"
-        android:layout_below="@id/infoholiday"
+        android:layout_below="@id/textinfH"
         android:layout_toRightOf="@+id/schoolChose"
-        android:layout_marginLeft="40dp"
-       android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+       android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+
+        android:popupBackground="@drawable/textfield"
+        android:layout_marginRight="20dp"
         >
 
     </Spinner>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/yersWork"
-        android:layout_below="@+id/schoolChose"
-        android:layout_alignLeft="@+id/schoolChose"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/yersWork"/>
+
 
     <EditText
-        android:layout_width="100dp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:id="@+id/counHoliday"
         android:layout_below="@+id/hol"
         android:layout_alignLeft="@+id/hol"
-       android:text=""
-        android:layout_alignBottom="@+id/yersWork"
-        android:inputType="number"/>
+        android:hint="@string/yersWork"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:background="@drawable/textfield"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/day"
-        android:layout_below="@+id/yersWork"
-        android:layout_alignLeft="@+id/yersWork"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/day"/>
-
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="10dp"
-        android:id="@+id/dayHoliday"
-        android:layout_below="@+id/counHoliday"
-        android:layout_alignLeft="@+id/counHoliday"
-        android:layout_marginTop="20dp"
-       android:layout_alignBottom="@+id/day"
-        android:background="@android:color/darker_gray"
-        android:layout_toRightOf="@+id/day"
-
-
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/d"
-        android:layout_toRightOf="@+id/dayHoliday"
-        android:layout_alignBottom="@+id/dayHoliday"
-        android:text="@string/d"
-        android:layout_marginLeft="30dp"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:id="@+id/btnday"
-        android:layout_below="@+id/dayHoliday"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/counHoliday"
+        android:layout_marginTop="35dp"
         android:onClick="countDayHoliday"
         android:text="@string/countHoliday"
-        />
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/celarDay"
-    android:text="@string/cleraDay"
-    android:layout_marginLeft="50dp"
-    android:layout_toRightOf="@id/btnday"
-    android:layout_alignBottom="@id/btnday"
-    android:onClick="czysc"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/month"
-        android:layout_below="@+id/btnday"
-        android:layout_alignLeft="@+id/btnday"
-        android:layout_marginTop="20dp"
-        android:text="@string/month"
+     style="@style/button"
+        android:layout_marginLeft="15dp"
 
         />
-    <EditText
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/d"
-        android:layout_alignBottom="@+id/month"
-        android:id="@+id/monthHoliday"
-        android:inputType="number"
-        />
-    <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/MonthHol"
-    android:layout_below="@+id/month"
-    android:layout_alignLeft="@+id/month"
-    android:layout_marginTop="20dp"
-    android:text="@string/monthHoliday"
-
-    />
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/countMonthHol"
-        android:layout_alignBottom="@+id/MonthHol"
-        android:layout_alignLeft="@+id/monthHoliday"
-        android:layout_marginTop="20dp"
-        android:text=""
-        android:background="@android:color/darker_gray"
+        android:id="@+id/celarDay"
+        android:text="@string/cleraDay"
+        android:layout_toRightOf="@id/btnday"
+        android:layout_alignBottom="@id/btnday"
+        android:onClick="czysc"
+        style="@style/button"
+        android:layout_alignLeft="@+id/counHoliday"
 
         />
 

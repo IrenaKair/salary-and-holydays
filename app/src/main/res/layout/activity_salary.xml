@@ -8,48 +8,48 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="com.example.robertkaczmarek.wynagrodzeniacalculator.SalaryActivity">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:id="@+id/infor">
-    <TextView
-        android:id="@+id/textinf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/salary"
-        android:textSize="20dp"/>
-    </ScrollView>
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sal"
-        android:entries="@array/salaryKind"
-        android:layout_below="@id/infor"
-        android:layout_marginTop="20dp">
 
-    </Spinner>
+    <TextView
+        android:id="@+id/textinfS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/moreSalary"
+        android:background="#FFFF00"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+
+        />
+
+
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/heightSalary"
         android:hint="@string/hSalary"
-        android:layout_below="@id/infor"
-        android:layout_toRightOf="@id/sal"
-        android:layout_alignBottom="@id/sal"
-        android:layout_marginLeft="60dp"
-        android:inputType="number"
+        android:layout_below="@id/textinfS"
+        android:gravity="center"
+android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:inputType="numberDecimal"
+        android:background="@drawable/textfield"
+        android:textSize="22dp"
         />
+
+
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sal"
-        android:layout_alignLeft="@id/infor"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_below="@id/heightSalary"
+        android:layout_alignLeft="@id/textinfS"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
         android:id="@+id/grup">
 
         <RadioButton
@@ -58,7 +58,7 @@
             android:text="@string/btnkosztyA"
             android:id="@+id/btnA"
             android:onClick="onRadio"
-
+            android:buttonTint="#0033ff"
             />
         <RadioButton
             android:layout_width="wrap_content"
@@ -66,108 +66,73 @@
             android:text="@string/btnkosztyB"
             android:id="@+id/btnB"
             android:onClick="onRadio"
+            android:buttonTint="#0033ff"
             />
     </RadioGroup>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/yearSalary"
+    android:text="@string/yearSalary"
+    android:layout_below="@+id/grup"
+    android:textColor="#0037ff"
+    android:textSize="18dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"/>
 
-    <TextView
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/zus"
-        android:layout_below="@id/grup"
-        android:layout_marginTop="30dp"
-        android:layout_alignLeft="@id/grup"
-        android:text="@string/zus"
-        android:paddingLeft="10dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/countZus"
-        android:layout_toRightOf="@id/zus"
-        android:layout_alignBottom="@id/zus"
-        android:layout_marginLeft="80dp"
-            android:text="                       "
-        android:background="@android:color/darker_gray"/>
+        android:id="@+id/group2"
+        android:layout_below="@+id/yearSalary">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pit"
-        android:layout_below="@id/zus"
-        android:layout_marginTop="20dp"
-        android:layout_alignLeft="@id/zus"
-        android:text="@string/pit"
-        android:paddingLeft="10dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/countPit"
-        android:layout_toRightOf="@id/pit"
-        android:layout_alignBottom="@id/pit"
-        android:layout_alignLeft="@id/countZus"
-        android:text="                       "
-        android:background="@android:color/darker_gray"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/zdr"
-        android:layout_below="@id/pit"
-        android:layout_marginTop="20dp"
-        android:layout_alignLeft="@id/zus"
-        android:text="@string/zdr"
-        android:paddingLeft="10dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/normal"
+            android:text="@string/normal"
+            android:onClick="reduction"
+            android:buttonTint="#0033ff"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/countZdr"
-        android:layout_toRightOf="@id/zdr"
-        android:layout_alignBottom="@id/zdr"
-        android:layout_alignLeft="@id/countPit"
-        android:text="                       "
-        android:background="@android:color/darker_gray"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/heightA"
+            android:text="@string/heightA"
+            android:onClick="reduction"
+            android:buttonTint="#0033ff"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/netto"
-        android:layout_below="@id/zdr"
-        android:layout_marginTop="20dp"
-        android:layout_alignLeft="@id/zdr"
-        android:text="@string/salaryN"
-        android:paddingLeft="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/countNetto"
-        android:layout_toRightOf="@id/netto"
-        android:layout_alignBottom="@id/netto"
-       android:layout_alignLeft="@id/countZdr"
-        android:text="                       "
-        android:background="@android:color/darker_gray"/>
-
+    </RadioGroup>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:paddingLeft="10dp"
         android:id="@+id/count"
-        android:layout_alignLeft="@id/netto"
-        android:layout_below="@id/netto"
+        android:layout_alignLeft="@id/grup"
+        android:layout_below="@id/group2"
         android:text="@string/count"
-        android:onClick="Count"/>
+        android:onClick="Count"
+        style="@style/button"
+        android:layout_marginLeft="15dp"
+       />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:paddingLeft="10dp"
         android:id="@+id/clear"
-        android:layout_alignLeft="@id/countPit"
+        android:layout_toRightOf="@+id/count"
+        android:layout_marginLeft="50dp"
         android:layout_alignBottom="@id/count"
         android:text="@string/clear"
-        android:onClick="Clear"/>
+        android:onClick="Clear"
+        style="@style/button"
+      />
 
 </RelativeLayout>

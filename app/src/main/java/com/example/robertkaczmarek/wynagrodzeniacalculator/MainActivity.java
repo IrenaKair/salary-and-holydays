@@ -51,4 +51,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+    public void goSalary(View view) {
+        Intent goSalalaryIntent = new Intent(MainActivity.this, SalaryActivity.class);
+        startActivity(goSalalaryIntent);
+    }
+
+    public void goHoliday(View view) {
+        Intent doHalidayIntent = new Intent(MainActivity.this, HolidayActivity.class);
+        startActivity(doHalidayIntent);
+    }
 }

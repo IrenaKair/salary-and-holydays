@@ -7,132 +7,151 @@
         <item>Państwowa Inspekacja Pracy</item>
         <item>Zakład Ubezpieczeń Społecznych</item>
     </string-array>
-    <string name="salary">Wynagrodzenie może być w kwocie brutto lub netto. Kwota brutto to kwota przed potrąceniem składek na ubepizeczenia społeczne i podatków. Kwota netto to kwota która jest przelewana na konto lub dostarczana do ręki.
-    - pracownik nie może zrzec się prawa do wynagrodzenia ani przenieść tego prawa na inną osobę,
-    - Wynagrodzenie za pracę płatne raz w miesiącu wypłaca się z dołu, niezwłocznie po ustaleniu jego pełnej wysokości, nie później jednak niż w ciągu pierwszych 10 dni następnego miesiąca kalendarzowego.
-    - podlegają potrąceniu tylko następujące należności:
+    <string name="salary"> <![CDATA[
+        <big><b>Wynagrodzenie</b></big> może być w kwocie brutto lub netto.<br> <b>Kwota brutto</b> to kwota przed potrąceniem składek na ubepizeczenia społeczne i podatków.<br> <b>Kwota netto</b> to kwota która jest przelewana na konto lub dostarczana do ręki.
+  <br>  Pracownik nie może <b>zrzec</b> się prawa do wynagrodzenia ani przenieść tego prawa na inną osobę,
+    <br>Wynagrodzenie za pracę płatne raz w miesiącu wypłaca się z dołu, <pre>nie później jednak niż w ciągu pierwszych 10 dni następnego miesiąca kalendarzowego.
+    <br><b>potrąceniu</b> tylko następujące należności:
 
-1) sumy egzekwowane na mocy tytułów wykonawczych na zaspokojenie świadczeń alimentacyjnych;
+<br>1) sumy egzekwowane na mocy tytułów wykonawczych na zaspokojenie świadczeń alimentacyjnych;
 
-2) sumy egzekwowane na mocy tytułów wykonawczych na pokrycie należności innych niż świadczenia alimentacyjne;
+<br>2) sumy egzekwowane na mocy tytułów wykonawczych na pokrycie należności innych niż świadczenia alimentacyjne;
 
-3) zaliczki pieniężne udzielone pracownikowi;
+<br>3) zaliczki pieniężne udzielone pracownikowi;
 
-4) kary pieniężne przewidziane w art. 108.
+<br>4) kary pieniężne przewidziane w art. 108kp.
 
-Potrąceń dokonuje się w kolejności podanej wyżej i w następujących granicach:
+<br> <b>Potrąceń</b> dokonuje się w kolejności podanej wyżej i w następujących granicach:
 
-1) w razie egzekucji świadczeń alimentacyjnych - do wysokości trzech piątych wynagrodzenia;
+<br>1) w razie egzekucji świadczeń alimentacyjnych - do wysokości trzech piątych wynagrodzenia;
 
-2) w razie egzekucji innych należności lub potrącania zaliczek pieniężnych - do wysokości połowy wynagrodzenia.
-    Wolna od potrąceń jest kwota wynagrodzenia za pracę w wysokości:
+<br>2) w razie egzekucji innych należności lub potrącania zaliczek pieniężnych - do wysokości połowy wynagrodzenia.
+   <br><b><big> Wolna</big></b> od potrąceń jest kwota wynagrodzenia za pracę w wysokości:
 
-1) minimalnego wynagrodzenia za pracę, ustalanego na podstawie odrębnych przepisów, przysługującego pracownikom zatrudnionym w pełnym wymiarze czasu pracy, po odliczeniu składek na ubezpieczenia społeczne oraz zaliczki na podatek dochodowy od osób fizycznych - przy potrącaniu sum egzekwowanych na mocy tytułów wykonawczych na pokrycie należności innych niż świadczenia alimentacyjne;
+<br>1) minimalnego wynagrodzenia za pracę, ustalanego na podstawie odrębnych przepisów, przysługującego pracownikom zatrudnionym w pełnym wymiarze czasu pracy, po odliczeniu składek na ubezpieczenia społeczne oraz zaliczki na podatek dochodowy od osób fizycznych - przy potrącaniu sum egzekwowanych na mocy tytułów wykonawczych na pokrycie należności innych niż świadczenia alimentacyjne;
 
-2) 75% wynagrodzenia określonego w pkt 1 - przy potrącaniu zaliczek pieniężnych udzielonych pracownikowi;
+<br>2) 75% wynagrodzenia określonego w pkt 1 - przy potrącaniu zaliczek pieniężnych udzielonych pracownikowi;
 
-3) 90% wynagrodzenia określonego w pkt 1 - przy potrącaniu kar pieniężnych
-    </string>
+<br>3) 90% wynagrodzenia określonego w pkt 1 - przy potrącaniu kar pieniężnych
+   ]]>
+ </string>
     <string-array name="salaryKind">
         <item>Brutto</item>
         <item>Netto</item>
     </string-array>
     <string name="hSalary"> wpisz kwotę </string>
-    <string name="zus">Składka ZUS</string>
+    <string name="zus">Składki ZUS płatne przez pracownika</string>
     <string name="pit">Podatek</string>
-    <string name="salaryN">Wynagrodzenie</string>
+    <string name="salaryN">Wynagrodzenie netto </string>
     <string name="count">Oblicz</string>
     <string name="clear">Wyczyść</string>
     <string name="zdr">Składka zdrowotna</string>
     <string name="btnkosztyA">praca w miejscu zamieszkania</string>
     <string name="btnkosztyB">praca poza miejszem zamieszkania</string>
-    <string name="holiday">Pracownikowi przysługuje prawo do corocznego, nieprzerwanego, płatnego urlopu wypoczynkowego, zwanego dalej "urlopem".
+    <string name="holiday"><![CDATA[
 
-Pracownik nie może zrzec się prawa do urlopu.
+      <big><b> Pracownikowi</big></b> przysługuje prawo do corocznego, nieprzerwanego, płatnego urlopu wypoczynkowego, zwanego dalej "urlopem".
+
+<big><b>Pracownik</big></b> nie może zrzec się prawa do urlopu.
 
 Pracownik podejmujący pracę po raz pierwszy, w roku kalendarzowym, w którym podjął pracę, uzyskuje prawo do urlopu z upływem każdego miesiąca pracy, w wymiarze 1/12 wymiaru urlopu przysługującego mu po przepracowaniu roku.Prawo do kolejnych urlopów pracownik nabywa w każdym następnym roku kalendarzowym.
 
-Wymiar urlopu wynosi:
+<br>Wymiar urlopu wynosi:
 
-1) 20 dni - jeżeli pracownik jest zatrudniony krócej niż 10 lat;
+<br>1) <b>20</b> dni - jeżeli pracownik jest zatrudniony krócej niż 10 lat;
 
-2) 26 dni - jeżeli pracownik jest zatrudniony co najmniej 10 lat.
-        Do okresu zatrudnienia, od którego zależy prawo do urlopu i wymiar urlopu, wlicza się okresy poprzedniego zatrudnienia, bez względu na przerwy w zatrudnieniu oraz sposób ustania stosunku pracy.
+<br>2) <b>26</b> dni - jeżeli pracownik jest zatrudniony co najmniej 10 lat.
+        <br>Do okresu zatrudnienia, od którego zależy prawo do urlopu i wymiar urlopu, wlicza się
+        okresy poprzedniego zatrudnienia, bez względu na przerwy w zatrudnieniu oraz sposób ustania stosunku pracy.
 
-W przypadku jednoczesnego pozostawania w dwóch lub więcej stosunkach pracy wliczeniu podlega także okres poprzedniego niezakończonego zatrudnienia w części przypadającej przed nawiązaniem drugiego lub kolejnego stosunku pracy.
+<br>W przypadku jednoczesnego pozostawania w dwóch lub więcej stosunkach pracy wliczeniu podlega także okres poprzedniego niezakończonego zatrudnienia w części przypadającej przed nawiązaniem drugiego lub kolejnego stosunku pracy.
 
-Urlopu udziela się w dni, które są dla pracownika dniami pracy, zgodnie z obowiązującym go rozkładem czasu pracy, w wymiarze godzinowym, odpowiadającym dobowemu wymiarowi czasu pracy pracownika w danym dniu.
-        Do okresu pracy, od którego zależy wymiar urlopu, wlicza się z tytułu ukończenia:
+<br>Urlopu udziela się w dni, które są dla pracownika dniami pracy, zgodnie z obowiązującym go rozkładem czasu pracy, w wymiarze godzinowym, odpowiadającym dobowemu wymiarowi czasu pracy pracownika w danym dniu.
+        <br>Do okresu pracy, od którego zależy wymiar urlopu, wlicza się z tytułu ukończenia:
 
-1) zasadniczej lub innej równorzędnej szkoły zawodowej - przewidziany programem nauczania czas trwania nauki, nie więcej jednak niż 3 lata,
+<br>1) zasadniczej lub innej równorzędnej szkoły zawodowej - przewidziany programem nauczania czas trwania nauki, nie więcej jednak niż <b>3 lata</b>,
 
-2) średniej szkoły zawodowej - przewidziany programem nauczania czas trwania nauki, nie więcej jednak niż 5 lat,
+<br>2) średniej szkoły zawodowej - przewidziany programem nauczania czas trwania nauki, nie więcej jednak niż <b>5 lat</b>,
 
-3) średniej szkoły zawodowej dla absolwentów zasadniczych (równorzędnych) szkół zawodowych - 5 lat,
+<br>3) średniej szkoły zawodowej dla absolwentów zasadniczych (równorzędnych) szkół zawodowych - <b>5 lat</b>,
 
-4) średniej szkoły ogólnokształcącej - 4 lata,
+<br>4) średniej szkoły ogólnokształcącej - <b>4 lata</b>,
 
-5) szkoły policealnej - 6 lat,
+<br>5) szkoły policealnej - <b>6 lat</b>,
 
-6) szkoły wyższej - 8 lat.
+<br>6) szkoły wyższej - <b>8 lat</b>.
 
-Okresy nauki, o których mowa w pkt 1-6, nie podlegają sumowaniu.
+<br>Okresy nauki, o których mowa w pkt 1-6, <b>nie podlegają sumowaniu</b>.
 
-Jeżeli pracownik pobierał naukę w czasie zatrudnienia, do okresu pracy, od którego zależy wymiar urlopu, wlicza się bądź okres zatrudnienia, w którym była pobierana nauka, bądź okres nauki, zależnie od tego, co jest korzystniejsze dla pracownika.
+<br>Jeżeli pracownik pobierał naukę w czasie zatrudnienia, do okresu pracy, od którego zależy wymiar urlopu, wlicza się bądź okres zatrudnienia, w którym była pobierana nauka, bądź okres nauki, zależnie od tego, co jest korzystniejsze dla pracownika.
         W roku kalendarzowym, w którym ustaje stosunek pracy z pracownikiem uprawnionym do kolejnego urlopu, pracownikowi przysługuje urlop:
 
-1) u dotychczasowego pracodawcy - w wymiarze proporcjonalnym do okresu przepracowanego u tego pracodawcy w roku ustania stosunku pracy, chyba że przed ustaniem tego stosunku pracownik wykorzystał urlop w przysługującym mu lub w wyższym wymiarze;
+<br>1) u dotychczasowego pracodawcy - w wymiarze proporcjonalnym do okresu przepracowanego u tego pracodawcy w roku ustania stosunku pracy, chyba że przed ustaniem tego stosunku pracownik wykorzystał urlop w przysługującym mu lub w wyższym wymiarze;
 
-2) u kolejnego pracodawcy - w wymiarze:
+<br>2) u kolejnego pracodawcy - w wymiarze:
 
-a) proporcjonalnym do okresu pozostałego do końca danego roku kalendarzowego - w razie zatrudnienia na czas nie krótszy niż do końca danego roku kalendarzowego,
+<br><li>a) proporcjonalnym do okresu pozostałego do końca danego roku kalendarzowego - w razie zatrudnienia na czas nie krótszy niż do końca danego roku kalendarzowego,
 
-b) proporcjonalnym do okresu zatrudnienia w danym roku kalendarzowym - w razie zatrudnienia na czas krótszy niż do końca danego roku kalendarzowego,
+<br><li>b) proporcjonalnym do okresu zatrudnienia w danym roku kalendarzowym - w razie zatrudnienia na czas krótszy niż do końca danego roku kalendarzowego,
 
 z zastrzeżeniem, że pracownikowi, który przed ustaniem stosunku pracy w ciągu roku kalendarzowego wykorzystał urlop w wymiarze wyższym niż wymiar podany wyżej, przysługuje u kolejnego pracodawcy urlop w odpowiednio niższym wymiarze; łączny wymiar urlopu w roku kalendarzowym nie może być jednak niższy niż wynikający z okresu przepracowanego w tym roku u wszystkich pracodawców.
         Pracodawca jest obowiązany udzielić pracownikowi urlopu w tym roku kalendarzowym, w którym pracownik uzyskał do niego prawo.
 
-Na wniosek pracownika urlop może być podzielony na części. W takim jednak przypadku co najmniej jedna część wypoczynku powinna trwać nie mniej niż 14 kolejnych dni kalendarzowych.
+<br><b>Na wniosek pracownika</b> urlop może być podzielony na części. W takim jednak przypadku co najmniej <b>jedna część wypoczynku powinna trwać nie mniej niż 14 kolejnych dni kalendarzowych</b>.
 
-Urlopy powinny być udzielane zgodnie z planem urlopów. Przesunięcie terminu urlopu może nastąpić na wniosek pracownika umotywowany ważnymi przyczynami.
-        Jeżeli pracownik nie może rozpocząć urlopu w ustalonym terminie z przyczyn usprawiedliwiających nieobecność w pracy, a w szczególności z powodu:
+<br>Urlopy powinny być udzielane zgodnie z planem urlopów. Przesunięcie terminu urlopu może nastąpić na wniosek pracownika umotywowany ważnymi przyczynami.
+        <br>Jeżeli pracownik nie może rozpocząć urlopu w ustalonym terminie z przyczyn usprawiedliwiających nieobecność w pracy, a w szczególności z powodu:
 
-1) czasowej niezdolności do pracy wskutek choroby,
+<br>1) czasowej niezdolności do pracy wskutek choroby,
 
-2) odosobnienia w związku z chorobą zakaźną,
+<br>2) odosobnienia w związku z chorobą zakaźną,
 
-3) powołania na ćwiczenia wojskowe albo na przeszkolenie wojskowe na czas do 3 miesięcy,
+<br>3) powołania na ćwiczenia wojskowe albo na przeszkolenie wojskowe na czas do 3 miesięcy,
 
 4) urlopu macierzyńskiego,
 
-pracodawca jest obowiązany przesunąć urlop na termin późniejszy.
+<br><b>pracodawca jest obowiązany</b> przesunąć urlop na termin późniejszy.
 
-Pracodawca może odwołać pracownika z urlopu tylko wówczas, gdy jego obecności w zakładzie wymagają okoliczności nieprzewidziane w chwili rozpoczynania urlopu.
+<br>Pracodawca może odwołać pracownika z urlopu tylko wówczas, gdy jego obecności w zakładzie wymagają okoliczności nieprzewidziane w chwili rozpoczynania urlopu.
 
-Pracodawca jest obowiązany pokryć koszty poniesione przez pracownika w bezpośrednim związku z odwołaniem go z urlopu.
-        Pracodawca jest obowiązany udzielić na żądanie pracownika i w terminie przez niego wskazanym nie więcej niż 4 dni urlopu w każdym roku kalendarzowym. Pracownik zgłasza żądanie udzielenia urlopu najpóźniej w dniu rozpoczęcia urlopu.
-        Urlopu niewykorzystanego w terminie  należy pracownikowi udzielić najpóźniej do dnia 30 września następnego roku kalendarzowego.
-        W przypadku niewykorzystania przysługującego urlopu w całości lub w części z powodu rozwiązania lub wygaśnięcia stosunku pracy pracownikowi przysługuje ekwiwalent pieniężny.
+<b><br>Pracodawca jest obowiązany pokryć koszty poniesione przez pracownika w bezpośrednim związku z odwołaniem go z urlopu.</b>
+        <br>Pracodawca jest obowiązany udzielić na żądanie pracownika i w terminie przez niego wskazanym nie więcej niż <b>4 dni urlopu</b> w każdym roku kalendarzowym. Pracownik zgłasza żądanie udzielenia urlopu najpóźniej w dniu rozpoczęcia urlopu.
+        Urlopu niewykorzystanego w terminie  należy pracownikowi udzielić najpóźniej <b>do dnia 30 września</b> następnego roku kalendarzowego.
+        <br> <b>Ekwiwalent pieniężny</b> przysługuje w przypadku niewykorzystania przysługującego urlopu w całości lub w części z powodu rozwiązania lub wygaśnięcia stosunku pracy pracownikowi przysługuje ekwiwalent pieniężny.
 
-    </string>
+  ]]>  </string>
 
     <string-array name="school">
+        <item>podstawowa</item>
         <item>zawodowa 2 letnia</item>
         <item>zawodowa 3 letnia</item>
         <item>średnia 4 lata</item>
         <item>średnia 5 lat</item>
-        <item>liceum ogólnokształcące</item>
+        <item>liceum ogóln.</item>
         <item>szkoła policealna</item>
         <item>studia wyższe</item>
     </string-array>
-    <string name="schoolChose">Ukończona szkoła</string>
+    <string name="schoolChose">Wybierz szkołę</string>
     <string name="yersWork">Podaj staż</string>
     <string name="yersWorkHint">lata pracy</string>
-    <string name="day">Urlop wynosi</string>
+    <string name="day">Roczny urlop</string>
     <string name="d">dni</string>
     <string name="dayHoliday">"                  "</string>
     <string name="countHoliday">Oblicz</string>
     <string name="cleraDay">Wyczyść</string>
-    <string name="month">Miesiące zatrudnienia</string>
+    <string name="month">W celu wyliczenia urlopu w obecnym miejscu pracy podaj poniźej ilość miesięcy zatrudnienia</string>
     <string name="monthHoliday">Urlop za przepracowane miesiące</string>
+    <string name="moreHoliday">Więcej o urlopach</string>
+    <string name="moreSalary">Więcej o wynagrodzeniach</string>
+    <string name="pracZUS">Składki ZUS płatne przez pracodawcę </string>
+    <string name="koszty">Łączne koszty pracodawcy</string>
+    <string name="inputSal">Przychód brutto</string>
+    <string name="procent">Procent jaki otrzymujesz w stosunku do tego co wydaje na Ciebie pracodawca </string>
+    <string name="yearSalary">Zaznacz przewidywany dochód</string>
+
+    <string name="normal">Dochód roczny do 85.528 zł</string>
+
+    <string name="heightA">Dochód roczny powyżej 85.528 zł</string>
+    <string name="text1">Przysługuje Ci roczny urlop w wymiarze:</string>
+    <string name="text2">dni</string>
 </resources>
