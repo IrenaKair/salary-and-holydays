@@ -154,4 +154,7 @@ z zastrzeżeniem, że pracownikowi, który przed ustaniem stosunku pracy w ciąg
     <string name="heightA">Dochód roczny powyżej 85.528 zł</string>
     <string name="text1">Przysługuje Ci roczny urlop w wymiarze:</string>
     <string name="text2">dni</string>
+    <string name="bez_koszt_w_np_obliczanie_nagr_d">bez kosztów - obliczanie nagród, premii</string>
+    <string name="bez_ulgi_obliczanie_wysoko_ci_nagrody">bez ulgi - obliczanie nagród, premii</string>
+    <string name="uwagi">Uwagi</string>
 </resources>

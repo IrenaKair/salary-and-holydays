@@ -1,21 +1,16 @@
 package com.example.robertkaczmarek.wynagrodzeniacalculator;
 
 import android.content.Intent;
-import android.icu.math.BigDecimal;
-import android.icu.text.DecimalFormat;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 public class SalaryActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -132,6 +127,8 @@ public class SalaryActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
+
+
     public void onRadio(View view) {
         RadioGroup grup = (RadioGroup) findViewById(R.id.grup);
         int id = grup.getCheckedRadioButtonId();
@@ -143,6 +140,9 @@ public class SalaryActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.btnB:
                 freeB = 139.06;
+                break;
+            case R.id.btnC:
+                freeB = 00.00;
                 break;
             default:
                 break;
@@ -204,6 +204,9 @@ public class SalaryActivity extends AppCompatActivity implements View.OnClickLis
                 freeTax = 46.33;
                 break;
             case R.id.heightA:
+                freeTax = 0.00;
+                break;
+            case R.id.reward:
                 freeTax = 0.00;
                 break;
             default:
