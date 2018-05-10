@@ -1,13 +1,13 @@
 package com.example.robertkaczmarek.wynagrodzeniacalculator;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class CountHoliday extends AppCompatActivity {
+public class CountHoliday extends Activity {
 
     public static final String YEAR_HOLIDAY = "year_holiday";
     Double ur;
@@ -29,17 +29,11 @@ public class CountHoliday extends AppCompatActivity {
     }
 
     public void countDayHoliday(View view) {
-
-
-
         EditText month = (EditText)findViewById(R.id.monthHoliday);
         String monthA = month.getText().toString();
-        //  int mmonth = Integer.parseInt(monthA);
         Double mmonth = Double.parseDouble(monthA);
         Double countMonthHol = ur/12*mmonth;
         text3 = getString(R.string.monthHoliday);
-
-
         String countMonthH = String.valueOf(Math.round(countMonthHol));
         TextView countMHol = (TextView)findViewById(R.id.countMonthHol);
         countMHol.setText(text3+ "\n"+ countMonthH+" "+ text2);

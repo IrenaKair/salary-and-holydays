@@ -1,11 +1,11 @@
 package com.example.robertkaczmarek.wynagrodzeniacalculator;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class CountSalary extends AppCompatActivity {
+public class CountSalary extends Activity {
 
    public static final String ZUS_RAZEM = "zusRazem";
     public static final String PIT = "pitAA";

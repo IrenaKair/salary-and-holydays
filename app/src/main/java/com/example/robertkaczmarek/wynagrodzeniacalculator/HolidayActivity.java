@@ -1,16 +1,14 @@
 package com.example.robertkaczmarek.wynagrodzeniacalculator;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
 import android.widget.EditText;
-
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class HolidayActivity extends AppCompatActivity implements View.OnClickListener {
+public class HolidayActivity extends Activity implements View.OnClickListener {
     Spinner school;
     int years;
     Double ur;
@@ -19,16 +17,12 @@ public class HolidayActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_holiday);
-
         TextView infHol = (TextView)findViewById(R.id.textinfH);
-
         infHol.setOnClickListener(this);
 
 
     }
     public void czysc(View view) {
-
-
         EditText yerWork = (EditText) findViewById(R.id.counHoliday);
         yerWork.setText("");
         TextView countMHol = (TextView)findViewById(R.id.countMonthHol);
@@ -40,8 +34,6 @@ public class HolidayActivity extends AppCompatActivity implements View.OnClickLi
 
 
     public void countDayHoliday(View view) {
-
-
         school = (Spinner) findViewById(R.id.hol);
         int x  = (Integer) school.getSelectedItemPosition();
         switch (x){
@@ -75,9 +67,7 @@ public class HolidayActivity extends AppCompatActivity implements View.OnClickLi
         }
         EditText yearWork = (EditText) findViewById(R.id.counHoliday);
         String yW = yearWork.getText().toString();
-       // int yWa = Integer.parseInt(yW);
         Double yWa = Double.parseDouble(yW);
-      //  int staż = yWa+years;
         Double staż = yWa+years;
         if (staż < 10) {
             ur = 20.00;
@@ -85,16 +75,11 @@ public class HolidayActivity extends AppCompatActivity implements View.OnClickLi
             ur = 26.00;
         }
         String urA = String.valueOf(Math.round(ur));
-
-
-
         Intent goCountHol = new Intent(HolidayActivity.this, CountHoliday.class);
         goCountHol.putExtra(CountHoliday.YEAR_HOLIDAY, urA);
-
         startActivity(goCountHol);
 
     }
-
 
     @Override
     public void onClick(View view) {

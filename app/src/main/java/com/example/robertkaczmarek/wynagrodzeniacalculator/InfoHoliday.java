@@ -1,12 +1,12 @@
 package com.example.robertkaczmarek.wynagrodzeniacalculator;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
 
-public class InfoHoliday extends AppCompatActivity {
+public class InfoHoliday extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
