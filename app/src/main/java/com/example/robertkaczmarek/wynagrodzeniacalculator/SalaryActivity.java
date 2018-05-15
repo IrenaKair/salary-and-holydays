@@ -3,6 +3,7 @@ package com.example.robertkaczmarek.wynagrodzeniacalculator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -15,8 +16,8 @@ public class SalaryActivity extends Activity implements View.OnClickListener {
     //  private Double freeA;
     public Double freeB;
     Double freeTax;
-    boolean checked = true;
-    boolean checked1 = true;
+    boolean checked;
+    boolean checked1;
      /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -24,12 +25,14 @@ public class SalaryActivity extends Activity implements View.OnClickListener {
   //  private GoogleApiClient client;
         int idA;
     int id;
-     public Double zusa;
-    public Double koszty;
+     public Double zusPracownika;
+    public Double wynMinusKoszty;
     public  double zusPracodawca;
     Double in;
+    Double kosztyPracodawcy;
     RadioGroup grup;
     RadioGroup group2;
+    private int stopaprocentowa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,10 +65,16 @@ public class SalaryActivity extends Activity implements View.OnClickListener {
 
     public void Count(View view) {
         EditText inputSalary;
+        boolean isError = false;
+        inputSalary = (EditText) findViewById(R.id.heightSalary);
+        inSalary = inputSalary.getText().toString();
+        if(TextUtils.isEmpty(inSalary)){
+            inputSalary.setError("Pole nie moźe być puste");
+            isError = true;
+        }
 
-        if( inSalary!=null&& checked==true&& checked1==true) {
-             inputSalary = (EditText) findViewById(R.id.heightSalary);
-            inSalary = inputSalary.getText().toString();
+        if( !isError&& checked==true&& checked1==true) {
+
             in = Double.parseDouble(inSalary);
 
 
@@ -84,37 +93,63 @@ public class SalaryActivity extends Activity implements View.OnClickListener {
             Double zusPR = in / 100 * 6.5;
             double zusPR1 = Math.round(zusPR * 100.0) / 100.0;
 
-            Double zusPW = in / 100 * 1.8;
+            Double zusPW = in / 100 * 1.67;
             double zusPW1 = Math.round(zusPW * 100.0) / 100.0;
-            Double zusFP = in / 100 * 2.45;
+            Double zusFP;
+            if( in<2100){
+               zusFP = 0.0;
+
+            }else {
+                zusFP = in / 100 * 2.45;
+            }
             double zusFP1 = Math.round(zusFP * 100.0) / 100.0;
             Double zusFGSP = in / 100 * 0.1;
             double zusFGSP1 = Math.round(zusFGSP * 100.0) / 100.0;
-
+            zusPracownika = zusE1 + zusR1 + zusCh1;
             zusPracodawca = zusPE1 + zusPR1 + zusPW1 + zusFP1 + zusFGSP1;
             String zusPracodawca1 = String.format("%.2f ", zusPracodawca);
-            koszty = in + zusPracodawca;
-            String koszty1 = String.valueOf(koszty);
-            zusa = zusE1 + zusR1 + zusCh1;
-
-            Double zdr = (in - zusa) / 100 * 9;
-            Double zdrOdliczPit = (in - zusa) / 100 * 7.75;
-            String zdrA = String.format("%.2f ", zdr);
 
 
-            Double tocountPit = in - zusa - freeB;
-            String zusRazem = String.format("%.2f ", zusa);
+
+            wynMinusKoszty = in - zusPracownika;
+
+           Double zdr9;
+
+            Double zdr7;
 
 
-            Double pitA = tocountPit / 100 * 18 - zdrOdliczPit - freeTax;
-            int pitA1 = (int) Math.round(pitA);
+            if ( wynMinusKoszty>= freeB) {
+             zdr9 = (in - zusPracownika) / 100 * 9;
+                zdr7 = (in - zusPracownika) / 100 * 7.75;
+
+            }
+            else{
+                zdr7 = 0.0;
+                zdr9 = 0.0;
+            }
+            String zdrA = String.format("%.2f ", zdr9);
+
+            Double zusRazem0 = zusPracownika + zusPracodawca;
+            String zusRazem = String.format("%.2f ", zusRazem0);
+            Double zaliczka;
+            if(wynMinusKoszty>=freeB+freeTax) {
+                zaliczka = (wynMinusKoszty-freeB) / 100 * stopaprocentowa - zdr7 - freeTax;
+            if ( zaliczka<0){
+                zaliczka=0.0;
+            }
+            }
+            else {
+                zaliczka = 0.0;
+            }
+            int pitA1 = (int) Math.round(zaliczka);
 
             String pitAA = String.valueOf(pitA1);
 
-            Double wynN = in - zusa - zdr - pitA;
+            Double wynN = in - zusPracownika- zdr9 - pitA1;
             String wynagrodzenie = String.format("%.2f ", wynN);
-
-            Double precent = wynN / koszty * 100;
+            kosztyPracodawcy = in+zusPracodawca;
+            String koszty1 = String.format("%.2f", kosztyPracodawcy);
+            Double precent = wynN / kosztyPracodawcy * 100;
 
             String precentA1 = String.format("%.2f", precent);
 
@@ -131,7 +166,7 @@ public class SalaryActivity extends Activity implements View.OnClickListener {
             startActivity(gocountSalary);
 
         }
-        else {
+        else  {
             Toast.makeText(this, "nie zaznaczono wszystkich pól",Toast.LENGTH_LONG).show();
 
              inputSalary = (EditText) findViewById(R.id.heightSalary);
@@ -208,10 +243,12 @@ public class SalaryActivity extends Activity implements View.OnClickListener {
             case R.id.normal:
                 checked1=true;
                 freeTax = 46.33;
+                stopaprocentowa = 18;
                 break;
             case R.id.heightA:
                 checked1=true;
                 freeTax = 0.00;
+                stopaprocentowa = 32;
                 break;
             case R.id.reward:
                 checked1=true;

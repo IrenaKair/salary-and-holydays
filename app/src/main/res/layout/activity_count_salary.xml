@@ -23,19 +23,18 @@
         android:id="@+id/salary"
         android:paddingLeft="5dp"
         android:textSize="18dp"
-        android:textColor="#060601"/>
+        />
 
 
     <TextView
         android:layout_width="100dp"
-    android:layout_height="wrap_content"
-    android:id="@+id/takeSal"
+        android:layout_height="wrap_content"
+        android:id="@+id/takeSal"
         android:layout_margin="5dp"
-
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:textSize="20dp"
-        android:textColor="#060601"
+
 
 
         />
@@ -106,7 +105,7 @@
         android:text="@string/salaryN"
         android:paddingLeft="5dp"
         android:textSize="19dp"
-        android:textColor="#0813d7"/>
+       />
 
     <TextView
         android:layout_width="wrap_content"
@@ -116,7 +115,7 @@
         android:layout_alignBottom="@id/netto"
         android:layout_alignLeft="@id/countZdr"
         android:textSize="19dp"
-        android:textColor="#0813d7"
+
         />
 
     <TextView
@@ -165,15 +164,20 @@
         android:text="@string/procent"
         android:id="@+id/procent"
         android:gravity="center"
-        android:layout_below="@+id/countkoszty"/>
+        android:layout_below="@+id/countkoszty"
+        android:lines="2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:id="@+id/precent"
-        android:textSize="19dp"
-        android:textColor="#0813d7"
-        android:layout_below="@+id/procent"/>
+        android:textSize="30dp"
+        android:textColor="#f20919"
+        android:layout_below="@+id/procent"
+        android:layout_marginTop="20dp"
+        />
 
 </RelativeLayout>

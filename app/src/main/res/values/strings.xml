@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Kalkulator wynagrodzeń i urlopów</string>
     <string name="head">Wynagrodzenia i urlopy</string>
-    <string-array name="aaa">
+    <string-array name="aaa" >
+
         <item>Obliczanie wynagrodzenia</item>
         <item>Urlopy</item>
         <item>Państwowa Inspekacja Pracy</item>
@@ -39,8 +40,8 @@
         <item>Brutto</item>
         <item>Netto</item>
     </string-array>
-    <string name="hSalary"> wpisz kwotę </string>
-    <string name="zus">Składki ZUS płatne przez pracownika</string>
+    <string name="hSalary"> wpisz kwotę wynagrodzenia brutto</string>
+    <string name="zus">Składki ZUS - pracownik</string>
     <string name="pit">Podatek</string>
     <string name="salaryN">Wynagrodzenie netto </string>
     <string name="count">Oblicz</string>
@@ -132,7 +133,7 @@ z zastrzeżeniem, że pracownikowi, który przed ustaniem stosunku pracy w ciąg
         <item>studia wyższe</item>
     </string-array>
     <string name="schoolChose">Wybierz szkołę</string>
-    <string name="yersWork">Podaj staż</string>
+    <string name="yersWork">Podaj staż pracy w latach</string>
     <string name="yersWorkHint">lata pracy</string>
     <string name="day">Roczny urlop</string>
     <string name="d">dni</string>
@@ -140,13 +141,13 @@ z zastrzeżeniem, że pracownikowi, który przed ustaniem stosunku pracy w ciąg
     <string name="countHoliday">Oblicz</string>
     <string name="cleraDay">Wyczyść</string>
     <string name="month">W celu wyliczenia urlopu w obecnym miejscu pracy podaj poniźej ilość miesięcy zatrudnienia</string>
-    <string name="monthHoliday">Urlop za przepracowane miesiące</string>
+    <string name="monthHoliday">Urlop za przepracowane miesiące wynosi</string>
     <string name="moreHoliday">Więcej o urlopach</string>
     <string name="moreSalary">Więcej o wynagrodzeniach</string>
-    <string name="pracZUS">Składki ZUS płatne przez pracodawcę </string>
+    <string name="pracZUS">Składki ZUS - pracodawca </string>
     <string name="koszty">Łączne koszty pracodawcy</string>
     <string name="inputSal">Przychód brutto</string>
-    <string name="procent">Procent jaki otrzymujesz w stosunku do tego co wydaje na Ciebie pracodawca </string>
+    <string name="procent">Procent jaki otrzymujesz w stosunku do tego co wydaje pracodawca </string>
     <string name="yearSalary">Zaznacz przewidywany dochód</string>
 
     <string name="normal">Dochód roczny do 85.528 zł</string>

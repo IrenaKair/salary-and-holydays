@@ -3,6 +3,7 @@ package com.example.robertkaczmarek.wynagrodzeniacalculator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,13 +30,20 @@ public class CountHoliday extends Activity {
     }
 
     public void countDayHoliday(View view) {
-        EditText month = (EditText)findViewById(R.id.monthHoliday);
+        EditText month = (EditText) findViewById(R.id.monthHoliday);
         String monthA = month.getText().toString();
-        Double mmonth = Double.parseDouble(monthA);
-        Double countMonthHol = ur/12*mmonth;
-        text3 = getString(R.string.monthHoliday);
-        String countMonthH = String.valueOf(Math.round(countMonthHol));
-        TextView countMHol = (TextView)findViewById(R.id.countMonthHol);
-        countMHol.setText(text3+ "\n"+ countMonthH+" "+ text2);
+        boolean isError = false;
+        if (TextUtils.isEmpty(monthA)) {
+            month.setError("Pole nie może być puste");
+            isError = true;
+        }
+        if (!isError) {
+            Double mmonth = Double.parseDouble(monthA);
+            Double countMonthHol = ur / 12 * mmonth;
+            text3 = getString(R.string.monthHoliday);
+            String countMonthH = String.valueOf(Math.round(countMonthHol));
+            TextView countMHol = (TextView) findViewById(R.id.countMonthHol);
+            countMHol.setText(text3 + "\n" + countMonthH + " " + text2);
+        }
     }
 }

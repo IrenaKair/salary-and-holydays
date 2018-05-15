@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:text="@string/salary"
             android:textSize="18dp"
-            android:background="#ffff00"
+            android:background="#4490e2"
 
 
 

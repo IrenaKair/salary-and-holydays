@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/holiday"
             android:textSize="18dp"
-            android:background="#ffff00"/>
+            android:background="#4490e2"/>
 
 
 

@@ -32,15 +32,16 @@
 
         />
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="              "
         android:layout_below="@+id/month"
         android:id="@+id/monthHoliday"
         android:layout_centerHorizontal="true"
         android:inputType="number"
-        android:background="@drawable/textfield"
+        android:hint="w miesiącach"
         android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
         />
 
     <TextView

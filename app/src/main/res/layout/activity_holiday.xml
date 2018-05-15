@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:text="@string/moreHoliday"
             android:textSize="20dp"
-            android:background="#FFFF00"
+            android:background="#FF3D87D7"
+            android:textColor="#FFFFFF"
             android:gravity="center"
             android:padding="10dp"
             />
@@ -32,6 +33,7 @@
         android:layout_below="@id/textinfH"
         android:layout_marginTop="10dp"
         android:text="@string/schoolChose"
+        android:textColor="#FFFFFF"
         android:paddingLeft="10dp"
 
         />
@@ -45,10 +47,9 @@
         android:layout_toRightOf="@+id/schoolChose"
         android:layout_marginLeft="70dp"
        android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
-
-        android:popupBackground="@drawable/textfield"
         android:layout_marginRight="20dp"
+
+
         >
 
     </Spinner>
@@ -56,39 +57,43 @@
 
 
     <EditText
-        android:layout_width="190dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/counHoliday"
         android:layout_below="@+id/hol"
-        android:layout_alignLeft="@+id/hol"
+        android:layout_alignLeft="@+id/schoolChose"
         android:hint="@string/yersWork"
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:inputType="numberDecimal"
-        android:background="@drawable/textfield"/>
+        android:textColor="#FFFFFF"
+      />
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnday"
         android:layout_below="@+id/counHoliday"
         android:layout_marginTop="35dp"
         android:onClick="countDayHoliday"
         android:text="@string/countHoliday"
-     style="@style/button"
-        android:layout_marginLeft="15dp"
+        style="@style/button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
 
         />
     <Button
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/celarDay"
+        android:layout_below="@+id/btnday"
         android:text="@string/cleraDay"
-        android:layout_toRightOf="@id/btnday"
-        android:layout_alignBottom="@id/btnday"
         android:onClick="czysc"
         style="@style/button"
+        android:layout_marginTop="30dp"
         android:layout_alignLeft="@+id/counHoliday"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
 
         />
 
